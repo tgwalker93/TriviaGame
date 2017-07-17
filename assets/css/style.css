@@ -12,9 +12,12 @@ body{
 
 }
 
-.answerClass:hover {
+#startButton:hover, #restartButton:hover {
 	background-color: #dadada;
+	border-color: #dadada;
+
 }
+
 /*JUMBOTRON*/
 #jumbo {
 	text-align: center;

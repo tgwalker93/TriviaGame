@@ -1,12 +1,11 @@
 $(document).ready(function() {
 
 var intervalId;
-var number = 5;
-var transitionNumber = 5;
+var number = 15;
+var transitionNumber = 15;
 var correctAnswers=0;
 var incorrectAnswers=0;
 var unanswered=0; 
-
 var questionsRemaining = 10;
 
 
@@ -34,7 +33,7 @@ var q1 = {
 	      audio.play();
     
       },
-	//you win giphy and you lose giphy
+
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/vi2ciYHi5u0FO' width='480' height='360' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/vi2ciYHi5u0FO'></a></p>");
@@ -42,12 +41,12 @@ var q1 = {
 
 };
 var q2 = {
-
-	answers: ['Doctor Ivo "Eggman" Robotnik', "Chaotix", "Metal Sonic", "Professor Gerald Robotnik"],
+	
+	answers: ["Doctor Ivo 'Eggman' Robotnik", "Chaotix", "Metal Sonic", "Professor Gerald Robotnik"],
 	question: "Who was the main villian of the original Sonic the Hedgehog game?",
 	correctAnswerIndex: 0,
 	wrongResponse: 'That answer is incorrect! The main villian of Sonic the Hedgehog was Doctor Ivo "Eggman" Robotnik',
-	correctResponse: 'That answer is incorrect! The main villian of Sonic the Hedgehog was Doctor Ivo "Eggman" Robotnik',
+	correctResponse: 'That answer is correct! The main villian of Sonic the Hedgehog was Doctor Ivo "Eggman" Robotnik',
 	timesUpResponse: 'Time is up! The main villian of Sonic the Hedgehog was Doctor Ivo "Eggman" Robotnik',
 
 
@@ -66,7 +65,7 @@ var q2 = {
 	      audio.play();
     
       },
-	//you win giphy and you lose giphy
+
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/rIlz9XFngD09G' width='480' height='263' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/sonic-the-hedgehog-rIlz9XFngD09G'></a></p>");		
@@ -96,7 +95,6 @@ var q3 = {
     
       },
 
-	//you win giphy and you lose giphy
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/dx3CzGXf8FmiQ' width='480' height='446' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/bomb-country-donkey-dx3CzGXf8FmiQ'></a></p>");		
@@ -127,8 +125,6 @@ var q4 = {
     
       },
 
-
-	//you win giphy and you lose giphy
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/HDrjzCsIrMvII' width='480' height='240' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/link-super-smash-bros-legend-of-zelda-HDrjzCsIrMvII'></a></p>");
@@ -160,7 +156,6 @@ var q5 = {
       },
 
 
-	//you win giphy and you lose giphy
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/13SqcuthpI2m1q' width='480' height='240' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/pokeball-jigglypuff-gengar-13SqcuthpI2m1q'></a></p>");		
@@ -192,7 +187,6 @@ var q6 = {
       },
 
 
-	//you win giphy and you lose giphy
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/1Yk70ig7ooQ9y' width='360' height='480' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/video-games-galaga-1Yk70ig7ooQ9y'></a></p>");		
@@ -224,7 +218,6 @@ var q7 = {
       },
 
 
-	//you win giphy and you lose giphy
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/r919d3tEtrxrW' width='480' height='414' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/fox-r919d3tEtrxrW'></a></p>");		
@@ -255,8 +248,6 @@ var q8= {
     
       },
 
-
-	//you win giphy and you lose giphy
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/1fdSDBlT9M5Jm' width='480' height='359' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/game-nintendo-nostalgia-1fdSDBlT9M5Jm'></a></p>");
@@ -286,7 +277,7 @@ var q9= {
 	      audio.play();
     
       },	
-	//you win giphy and you lose giphy
+
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/hfrziBEPjaAec' width='480' height='268' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/hfrziBEPjaAec'></a></p>");
@@ -318,8 +309,6 @@ var q10= {
     
       },
 
-
-	//you win giphy and you lose giphy
 	getGiphy: function() {
 
 		$("#question").html("<iframe src='https://giphy.com/embed/vsYiggyuSRYDC' width='480' height='240' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/kingdom-hearts-vsYiggyuSRYDC'></a></p>");		
@@ -328,19 +317,7 @@ var q10= {
 
 
 
-var arrayOfQuestions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
 
-
-
-var randomNum;
-
-// = Math.floor(Math.random()*(arrayOfQuestions.length-1)) + 1;
-
-
-var timesUpCheck = false;
-
-
-//var triviaQuestions = {
 function getQuestion(question, answers, correctAnswerIndex) {
 
 	runTimer();
@@ -408,21 +385,24 @@ function getQuestion(question, answers, correctAnswerIndex) {
 			return;
 		}
 	});
-
-
-
-
 		
 	}
-//};
+var arrayOfQuestions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
+var randomNum;
 
 function generateRandomQuestion() {
+	if(questionsRemaining===0){
+		endGame();
+		return;
+
+	}else {
 	randomNum = Math.floor(Math.random()*(arrayOfQuestions.length));
 	var questionObject = arrayOfQuestions[randomNum];
 	var randQuestion = questionObject.question;
 	var randAnswer = questionObject.answers;
 	questionObject.getMusic();
 	getQuestion(randQuestion, randAnswer, questionObject.correctAnswerIndex);
+	}
 }
 
 
@@ -432,14 +412,7 @@ function answerCorrectly() {
 	correctAnswers++;
 	questionsRemaining--;
 
-
-	if(questionsRemaining===0){
-		endGame();
-		return;
-
-	}else {
-
-	transitionNumber=5;
+	transitionNumber=15;
 
 	emptyDivs();
 
@@ -454,17 +427,13 @@ function answerCorrectly() {
 
 }
 
-}
-
 function answerWrong() {
 	incorrectAnswers++;
 	questionsRemaining--;
-	if(questionsRemaining===0){
-		endGame();
-	}else {
 
 
-	transitionNumber=5;
+
+	transitionNumber=15;
 
 	emptyDivs();
 
@@ -478,21 +447,17 @@ function answerWrong() {
 	arrayOfQuestions.splice(randomNum, 1);
 	intervalId = setInterval(transitionDecrement, 1000);
 
-		}
 
 }
 
 function outOfTime() {
 	unanswered++;
 	questionsRemaining--;
-	if(questionsRemaining===0){
-		endGame();
-	}else {
 
 
 
 
-	transitionNumber=5;
+	transitionNumber=15;
 
 	emptyDivs();
 
@@ -504,8 +469,6 @@ function outOfTime() {
 	clearInterval(intervalId);
 	arrayOfQuestions.splice(randomNum, 1);
 	intervalId = setInterval(transitionDecrement, 1000);
-}
-
 }
 
 function emptyDivs(){
@@ -538,7 +501,6 @@ function runTimer() {
 	$("#triviaBody").append("<div id='answer2'>"+ "</div>");
 	$("#triviaBody").append("<div id='answer3'>" + "</div>");
 	$("#triviaBody").append("<div id='answer4'>" + "</div>");
-	//$("#timer").html("<h2> Time Left: " + number + "</h2>");
 }
 
 function decrement() {
@@ -551,8 +513,6 @@ function decrement() {
 
 	if(number === 0) {
 		stop();
-
-		timesUpCheck = true;
 		outOfTime();
 	}
 
@@ -562,11 +522,10 @@ function decrement() {
 
 
 function transitionDecrement() {
-	number = 5;
+	number = 15;
 	transitionNumber --;
 
 
-	//$("#timer").append(transitionNumber);
 	if(transitionNumber === 0) {
 	stop();
 
@@ -596,8 +555,8 @@ function endGame(){
 	$("#triviaBody").append(playAgain);
 
 	$("#restartButton").on("click",function(){
-	number = 5;
-	transitionNumber = 5;
+	number = 15;
+	transitionNumber = 15;
 	correctAnswers=0;
 	incorrectAnswers=0;
 	unanswered=0; 
@@ -605,7 +564,6 @@ function endGame(){
 	questionsRemaining = 10;
 	arrayOfQuestions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
 	randomNum = Math.floor(Math.random()*(arrayOfQuestions.length));
-	timesUpCheck = false;
 
 	generateRandomQuestion();
 
@@ -629,8 +587,6 @@ function startGame() {
 
 }
 startGame();
-//getQuestion(q1, q1Answers, 0);
-//runTimer();
 
 
 
