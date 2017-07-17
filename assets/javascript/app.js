@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 var intervalId;
 var number = 5;
 var transitionNumber = 5;
@@ -18,7 +19,27 @@ var q1 = {
 	correctResponse: "That answer is correct! The first Mario game came out in 1983, titled Mario Bros. Super Mario Bros was released in 1985 as a sequel to Mario Bros.",
 	timesUpResponse: "Time is up! The first Mario game came out in 1983, titled Mario Bros. Super Mario Bros was released in 1985 as a sequel to Mario Bros.",
 
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/mario.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/vi2ciYHi5u0FO' width='480' height='360' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/vi2ciYHi5u0FO'></a></p>");
+	}
+
 };
 var q2 = {
 
@@ -29,7 +50,27 @@ var q2 = {
 	correctResponse: 'That answer is incorrect! The main villian of Sonic the Hedgehog was Doctor Ivo "Eggman" Robotnik',
 	timesUpResponse: 'Time is up! The main villian of Sonic the Hedgehog was Doctor Ivo "Eggman" Robotnik',
 
+
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/sonic.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/rIlz9XFngD09G' width='480' height='263' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/sonic-the-hedgehog-rIlz9XFngD09G'></a></p>");		
+	}
 };
 var q3 = {
 
@@ -40,7 +81,26 @@ var q3 = {
 	correctResponse: "That is correct! Daddy Kong was NOT a member of the Donkey Kong, he does not exist.",
 	timesUpResponse: "Time is up! Daddy Kong was NOT a member of the Donkey Kong, he does not exist.",
 
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/donkeykong.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
+
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/dx3CzGXf8FmiQ' width='480' height='446' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/bomb-country-donkey-dx3CzGXf8FmiQ'></a></p>");		
+	}
 };
 var q4 = {
 
@@ -50,8 +110,29 @@ var q4 = {
 	wrongResponse: "That answer was incorrect! The The Legend of Zelda: Ocarina of Time Master Quest was released on the Nintendo GameGube as a remake of the The Legend of Zelda: Ocarina of Time from the Nintendo64!",
 	correctResponse: "That answer was correct! The The Legend of Zelda: Ocarina of Time Master Quest was released on the Nintendo GameGube as a remake of the The Legend of Zelda: Ocarina of Time from the Nintendo64!",
 	timesUpResponse: "Time is up! The The Legend of Zelda: Ocarina of Time Master Quest was released on the Nintendo GameGube as a remake of the The Legend of Zelda: Ocarina of Time from the Nintendo64!",
-	
+
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/link.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
+
+
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/HDrjzCsIrMvII' width='480' height='240' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/link-super-smash-bros-legend-of-zelda-HDrjzCsIrMvII'></a></p>");
+	}
 };
 var q5 = {
 
@@ -62,7 +143,28 @@ var q5 = {
 	correctResponse: "That answer was correct! Pokemon's bestselling game was it's first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
 	timesUpResponse: "Time is up! Pokemon's bestselling game was it's first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
 
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/pikachu.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
+
+
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/13SqcuthpI2m1q' width='480' height='240' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/pokeball-jigglypuff-gengar-13SqcuthpI2m1q'></a></p>");		
+	}
 };
 var q6 = {
 
@@ -73,7 +175,28 @@ var q6 = {
 	correctResponse: "That answer was correct! Galaga was developed and published by Namco in Japan, and developed and published by Midway in the U.S.",
 	timesUpResponse: "Time is up! Galaga was developed and published by Namco in Japan, and developed and published by Midway in the U.S.",
 
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/galaga.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
+
+
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/1Yk70ig7ooQ9y' width='360' height='480' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/video-games-galaga-1Yk70ig7ooQ9y'></a></p>");		
+	}
 };
 var q7 = {
 
@@ -84,7 +207,28 @@ var q7 = {
 	correctResponse: "That answer is correct! Wolf O'Donnell was NOT a member of Fox McCloud's team, in fact he was a primary villian.",
 	timesUpResponse: "Time is up! Wolf O'Donnell was NOT a member of Fox McCloud's team, in fact he was a primary villian.",
 
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/fox.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
+
+
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/r919d3tEtrxrW' width='480' height='414' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/fox-r919d3tEtrxrW'></a></p>");		
+	}
 };
 var q8= {
 
@@ -95,7 +239,28 @@ var q8= {
 	correctResponse: "That answer is correct! In the original Banjo-Kazooie game, Banjo and his bird companion, Kazooie, must save his sister Tooty who was kidnapped by a jealous witch named Gruntilda!",
 	timesUpResponse: "Time is up! In the original Banjo-Kazooie game, Banjo and his bird companion, Kazooie, must save his sister Tooty who was kidnapped by a jealous witch named Gruntilda!",
 
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/banjo-kazooie.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
+
+
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/1fdSDBlT9M5Jm' width='480' height='359' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/game-nintendo-nostalgia-1fdSDBlT9M5Jm'></a></p>");
+	}
 };
 var q9= {
 
@@ -106,7 +271,26 @@ var q9= {
 	correctResponse: "That answer is correct! The first 3D Pac-Man game was called Pac-Man World, developed and published in 1999 on PlayStation",
 	timesUpResponse: "Time is up! The first 3D Pac-Man game was called Pac-Man World, developed and published in 1999 on PlayStation",
 	
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/pacman.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },	
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/hfrziBEPjaAec' width='480' height='268' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/hfrziBEPjaAec'></a></p>");
+	}
 };
 
 var q10= {
@@ -118,7 +302,28 @@ var q10= {
 	correctResponse: "That answer is correct! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness and Riku decided to dissapear into the darkness and later became an enemy of Sora!",	
 	timesUpResponse: "Time is up! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness and Riku decided to dissapear into the darkness and later became an enemy of Sora!",	
 
+
+	getMusic: function() {
+
+	      var audio = document.getElementById("audiotag");
+	      audio.innerHTML = "";
+	      var song = document.createElement("source");
+	      
+	      song.setAttribute('src', 'assets/audio/sora.mp3');
+	      song.setAttribute('type', 'audio/ogg');
+	      song.setAttribute('type', 'audio/mpeg');
+	      audio.appendChild(song);
+	      audio.load();
+	      audio.play();
+    
+      },
+
+
 	//you win giphy and you lose giphy
+	getGiphy: function() {
+
+		$("#question").html("<iframe src='https://giphy.com/embed/vsYiggyuSRYDC' width='480' height='240' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/kingdom-hearts-vsYiggyuSRYDC'></a></p>");		
+	}
 };
 
 
@@ -216,6 +421,7 @@ function generateRandomQuestion() {
 	var questionObject = arrayOfQuestions[randomNum];
 	var randQuestion = questionObject.question;
 	var randAnswer = questionObject.answers;
+	questionObject.getMusic();
 	getQuestion(randQuestion, randAnswer, questionObject.correctAnswerIndex);
 }
 
@@ -239,6 +445,7 @@ function answerCorrectly() {
 
 
 	var questionObject = arrayOfQuestions[randomNum];
+	questionObject.getGiphy();
 
 	$("#timer").html(questionObject.correctResponse);
 	clearInterval(intervalId);
@@ -263,6 +470,8 @@ function answerWrong() {
 
 
 	var questionObject = arrayOfQuestions[randomNum];
+	questionObject.getGiphy();
+
 
 	$("#timer").html(questionObject.wrongResponse);
 	clearInterval(intervalId);
@@ -289,6 +498,8 @@ function outOfTime() {
 
 
 	var questionObject = arrayOfQuestions[randomNum];
+	questionObject.getGiphy();
+
 	$("#timer").html(questionObject.timesUpResponse);
 	clearInterval(intervalId);
 	arrayOfQuestions.splice(randomNum, 1);
@@ -318,7 +529,7 @@ function emptyDivs(){
 
 function runTimer() {
 	$("#triviaBody").html("");
-	$("#triviaBody").append("<div id='timer'> <h2> Time Left: "+number+ "</h2> </div>");
+	$("#triviaBody").append("<div id='timer'> Time Left: "+number+ " </div>");
 	intervalId = setInterval(decrement, 1000);
 
 
@@ -334,7 +545,7 @@ function decrement() {
 
 	number --;
 
-	$("#timer").html("<h2> Time Left: " + number + "</h2>");
+	$("#timer").html("Time Left: " + number + "");
 
 
 

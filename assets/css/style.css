@@ -1,3 +1,77 @@
 body{
-	background-color: black;
+  background-image:url("../images/chars4.png");
+  background-size:cover;
+
+
 }
+#startButton, #restartButton {
+	background-color: #000000;
+	border-color: #000000;
+	height: 70px;
+    width: 250px;
+
+}
+
+.answerClass:hover {
+	background-color: #dadada;
+}
+/*JUMBOTRON*/
+#jumbo {
+	text-align: center;
+	font-family: 'Bungee Shade', cursive;
+	color: #000000;
+    font-size: 50px;
+}
+/*BODY*/
+#triviaBody {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+#answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover {
+	background-color: #dadada;
+}
+/* -------------------------- AUDIO CODE --------------------- */
+#backgroundaudio { 
+  display: block; 
+  position: fixed; 
+  bottom: -43px; 
+  left: 5px; 
+  -webkit-transition: all 1s ease-in-out; 
+  -moz-transition: all 1s ease-in-out; 
+  -ms-transition: all 1s ease-in-out; 
+  -o-transition: all 1s ease-in-out; 
+  transition: all 1s ease-in-out; 
+  } 
+  #backgroundaudio:hover { 
+  bottom: 0; 
+  -webkit-transition: all 1s ease-in-out; 
+  -moz-transition: all 1s ease-in-out; 
+  -ms-transition: all 1s ease-in-out; 
+  -o-transition: all 1s ease-in-out; 
+  transition: all 1s ease-in-out; 
+  } 
+  #backgroundaudio audio { 
+  background: #ffffff; 
+  padding: 5px; 
+  display: table-cell; 
+  vertical-align: middle; 
+  height: 43px; 
+  z-index: 9998; 
+  } 
+  #backgroundaudio i { 
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+  text-transform: lowercase;
+  display: block;  
+  padding: 5px; 
+  width: 50px; 
+  float: none; 
+  margin-bottom: -1px; 
+  z-index: 9999; 
+  } 
+	#song {
+	visibility: none;
+	}
+  /*-------------------------END AUDIO CORE-------------------------------*/
