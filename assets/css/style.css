@@ -31,8 +31,17 @@ body{
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
 }
-#answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover {
-	background-color: #dadada;
+
+#answer1Button, #answer2Button, #answer3Button, #answer4Button {
+  background-color: #000000;
+  border-color: #000000;
+  height: 50px;
+  width: 700px;
+  margin-top: 30px;
+}
+#answer1Button:hover, #answer2Button:hover, #answer3Button:hover, #answer4Button:hover {
+  background-color: #dadada;
+  border-color: #dadada;
 }
 /* -------------------------- AUDIO CODE --------------------- */
 #backgroundaudio { 

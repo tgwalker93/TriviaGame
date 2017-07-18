@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 var intervalId;
-var number = 15;
+var number = 20;
 var transitionNumber = 15;
 var correctAnswers=0;
 var incorrectAnswers=0;
@@ -11,7 +11,7 @@ var questionsRemaining = 10;
 
 var q1 = {
 
-	answers: ["Super Mario, 1985", "Mario Bros, 1985", "Super Mario, 1983", "Mario Bros, 1983"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Super Mario, 1985</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Mario Bros, 1985</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Super Mario, 1983</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Mario Bros, 1983</button>"],
 	question: "What was the name of the first Mario game and what year did it come out?",
 	correctAnswerIndex: 3,
 	wrongResponse: "That answer is incorrect! The first Mario game came out in 1983, titled Mario Bros. Super Mario Bros was released in 1985 as a sequel to Mario Bros.",
@@ -41,8 +41,9 @@ var q1 = {
 
 };
 var q2 = {
-	
-	answers: ["Doctor Ivo 'Eggman' Robotnik", "Chaotix", "Metal Sonic", "Professor Gerald Robotnik"],
+
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Doctor Ivo 'Eggman' Robotnik</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Chaotix</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Metal Sonic</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Professor Gerald Robotnik</button>"],
+
 	question: "Who was the main villian of the original Sonic the Hedgehog game?",
 	correctAnswerIndex: 0,
 	wrongResponse: 'That answer is incorrect! The main villian of Sonic the Hedgehog was Doctor Ivo "Eggman" Robotnik',
@@ -73,7 +74,7 @@ var q2 = {
 };
 var q3 = {
 
-	answers: ["Funky Kong", "Candy Kong", "Daddy Kong", "Wrinkly Kong"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Funky Kong</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Candy Kong</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Daddy Kong</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Wrinkly Kong</button>"],
 	question: "Which of the following is NOT a member of the Donkey Kong family?",
 	correctAnswerIndex: 2,
 	wrongResponse: "That is incorrect! Daddy Kong was NOT a member of the Donkey Kong, he does not exist.",
@@ -97,12 +98,12 @@ var q3 = {
 
 	getGiphy: function() {
 
-		$("#question").html("<iframe src='https://giphy.com/embed/dx3CzGXf8FmiQ' width='480' height='446' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/bomb-country-donkey-dx3CzGXf8FmiQ'></a></p>");		
+		$("#question").html("<iframe src='https://giphy.com/embed/dx3CzGXf8FmiQ' width='480' height='446' frameBorder='0' class='giphy-embed' allowFullScreen></iframe>");		
 	}
 };
 var q4 = {
 
-	answers: ["Gameboy Advance", "Nintendo64", "GameCube", "Wii"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Gameboy Advance</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Nintendo64</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>GameCube</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Wii</button>"],
 	question: "What console was the The Legend of Zelda: Ocarina of Time Master Quest released on?",
 	correctAnswerIndex: 2,
 	wrongResponse: "That answer was incorrect! The The Legend of Zelda: Ocarina of Time Master Quest was released on the Nintendo GameGube as a remake of the The Legend of Zelda: Ocarina of Time from the Nintendo64!",
@@ -132,12 +133,12 @@ var q4 = {
 };
 var q5 = {
 
-	answers: ["Pokemon Diamond & Pearl", "Pokemon Red/Green/Blue", "Pokemon Ruby & Sapphire", "Pokemon Gold & Silver"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Pokemon Diamond & Pearl</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Pokemon Red/Green/Blue</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Pokemon Ruby & Sapphire</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Pokemon Gold & Silver</button>"],
 	question: "What Pokemon's best selling video video game?",
 	correctAnswerIndex: 1,
-	wrongResponse: "That answer was incorrect! Pokemon's bestselling game was it's first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
-	correctResponse: "That answer was correct! Pokemon's bestselling game was it's first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
-	timesUpResponse: "Time is up! Pokemon's bestselling game was it's first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
+	wrongResponse: "That answer was incorrect! Pokemon's bestselling game was its first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
+	correctResponse: "That answer was correct! Pokemon's bestselling game was its first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
+	timesUpResponse: "Time is up! Pokemon's bestselling game was its first generation game Pokemon Red/Green/Blue coming in at roughly $1.941 billion dollars in revenue! Their first generation games first released in 1996 and it did far better than any other game that they've sold!",
 
 
 	getMusic: function() {
@@ -163,12 +164,12 @@ var q5 = {
 };
 var q6 = {
 
-	answers: ["Sega", "Namco", "Atari", "Midway"],
-	question: "Which company developed and published Galaga in America?",
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Sega</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Namco</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Atari</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Midway</button>"],
+	question: "Which company published Galaga in America?",
 	correctAnswerIndex: 3,
-	wrongResponse: "That answer was incorrect! Galaga was developed and published by Namco in Japan, and developed and published by Midway in the U.S.",
-	correctResponse: "That answer was correct! Galaga was developed and published by Namco in Japan, and developed and published by Midway in the U.S.",
-	timesUpResponse: "Time is up! Galaga was developed and published by Namco in Japan, and developed and published by Midway in the U.S.",
+	wrongResponse: "That answer was incorrect! Galaga was developed and published by Namco in Japan, published by Midway in the U.S.",
+	correctResponse: "That answer was correct! Galaga was developed and published by Namco in Japan, published by Midway in the U.S.",
+	timesUpResponse: "Time is up! Galaga was developed and published by Namco in Japan, published by Midway in the U.S.",
 
 
 	getMusic: function() {
@@ -194,7 +195,7 @@ var q6 = {
 };
 var q7 = {
 
-	answers: ["Falco Lombardi", "Peppy Hare", "Wolf O'Donnell", "Slippy Toad"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Falco Lombardi</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Peppy Hare</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Wolf O'Donnell</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Slippy Toad</button>"],
 	question: "Which of the following Star Fox characters was NOT a member of Fox McCloud's team?",
 	correctAnswerIndex: 2,
 	wrongResponse: "That answer is incorrect! Wolf O'Donnell was NOT a member of Fox McCloud's team, in fact he was a primary villian.",
@@ -225,7 +226,7 @@ var q7 = {
 };
 var q8= {
 
-	answers: ["His sister, Tooty", "His bird, Kazooie", "Gruntilda", "Bottles, the mole"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>His sister, Tooty</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>His bird, Kazooie</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Gruntilda</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Bottles, the mole</button>"],
 	question: "In the game Banjo-Kazooie on Nintendo 64, who does Banjo have to save?",
 	correctAnswerIndex: 0,
 	wrongResponse: "That answer is incorrect! In the original Banjo-Kazooie game, Banjo and his bird companion, Kazooie, must save his sister Tooty who was kidnapped by a jealous witch named Gruntilda!",
@@ -255,7 +256,7 @@ var q8= {
 };
 var q9= {
 
-	answers: ["Pac-Attack", "Pac-In-Time", "Pac-Man: Adventures in Time", "Pac-Man World"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Pac-Attack</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Pac-In-Time</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Pac-Man: Adventures in Time</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Pac-Man World</button>"],
 	question: "What was the name of the first 3D Pac-Man game?",
 	correctAnswerIndex: 3,
 	wrongResponse: "That answer is incorrect! The first 3D Pac-Man game was called Pac-Man World, developed and published in 1999 on PlayStation",
@@ -286,12 +287,12 @@ var q9= {
 
 var q10= {
 
-	answers: ["Kairi", "Riku", "Roxas", "Terra"],
+	answers: ["<button id='answer1Button' type='button' class='btn btn-primary'>Kairi</button>", "<button id='answer2Button' type='button' class='btn btn-primary'>Riku</button>", "<button id='answer3Button' type='button' class='btn btn-primary'>Roxas</button>", "<button id='answer4Button' type='button' class='btn btn-primary'>Terra</button>"],
 	question: "What is the name of the character that betrayed Sora, who was one of his close friends, in Kingdom Hearts?",
 	correctAnswerIndex: 1,
-	wrongResponse: "That answer is incorrect! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness and Riku decided to dissapear into the darkness and later became an enemy of Sora!",
-	correctResponse: "That answer is correct! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness and Riku decided to dissapear into the darkness and later became an enemy of Sora!",	
-	timesUpResponse: "Time is up! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness and Riku decided to dissapear into the darkness and later became an enemy of Sora!",	
+	wrongResponse: "That answer is incorrect! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness. Riku decided to disappear into the darkness and later became an enemy of Sora!",
+	correctResponse: "That answer is correct! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness. Riku decided to disappear into the darkness and later became an enemy of Sora!",	
+	timesUpResponse: "Time is up! Riku first appears a little jealous of Sora and Kairi before Destiny Islands was consumed by darkness. Riku decided to disappear into the darkness and later became an enemy of Sora!",	
 
 
 	getMusic: function() {
@@ -522,7 +523,7 @@ function decrement() {
 
 
 function transitionDecrement() {
-	number = 15;
+	number = 20;
 	transitionNumber --;
 
 
@@ -555,7 +556,7 @@ function endGame(){
 	$("#triviaBody").append(playAgain);
 
 	$("#restartButton").on("click",function(){
-	number = 15;
+	number = 20;
 	transitionNumber = 15;
 	correctAnswers=0;
 	incorrectAnswers=0;
