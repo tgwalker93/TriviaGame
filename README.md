@@ -3,9 +3,6 @@
 # Classic Video Game Themed Trivia
 A trivia game that only uses HTML, CSS, JavaScript, and Jquery. When the player starts the game, the player has 15 seconds to answer each question and then the solution will display for 15 seconds. At the end of the game, the results will display.
 
-## Rules
-
-
 ## Authors
 
 * **Tyler Walker** - *Sole Developer* - [tgwalker93](https://github.com/tgwalker93)
