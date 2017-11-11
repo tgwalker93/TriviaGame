@@ -1,7 +1,7 @@
 ![https://github.com/tgwalker93/TriviaGame/blob/master/assets/images/chars2.jpg](https://github.com/tgwalker93/TriviaGame/blob/master/assets/images/chars2.jpg)
 
 # Classic Video Game Themed Trivia
-A World of Warcraft themed strategy game using only HTML, Javascript, Jquery, CSS and Bootstrap. 
+A trivia game that only uses HTML, CSS, JavaScript, and Jquery. When the player starts the game, the player has 15 seconds to answer each question and then the solution will display for 15 seconds. At the end of the game, the results will display.
 
 ## Rules
 
